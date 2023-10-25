@@ -6,14 +6,18 @@
 @import "bases/typograhy";
 @import "bases/utils";
 
-@import "sections/section_header";
-@import "sections/section_main";
-@import "sections/section_footer";
-@import "sections/section_about";
-@import "sections/section_skills";
+@import "sections/header";
+@import "sections/about";
+@import "sections/skills";
+@import "sections/courses";
+@import "sections/testimonials";
+@import "sections/footer";
 
 @import "compoments/button";
 @import "compoments/composition";
 @import "compoments/skill-box";
+@import "compoments/card";
+@import "compoments/testimonials";
+@import "compoments/bg-video";
 
 @import "layouts/grids";
