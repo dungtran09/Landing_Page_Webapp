@@ -2,8 +2,8 @@
 
 ## Introduction
 
-# - This is a code repository for the webapp - landing page .
+### - This is a code repository for the webapp - landing page .
 
-# - Using Html/scss
+### - Using Html/scss
 
-# - Full Responsive Website
+### - Full Responsive Website
