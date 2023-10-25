@@ -1,9 +1,16 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "bases/base";
+@import "bases/animations";
+@import "bases/typograhy";
+@import "bases/utils";
 
 @import "sections/section_header";
 @import "sections/section_main";
 @import "sections/section_footer";
+@import "sections/section_about";
 
 @import "compoments/button";
+@import "compoments/composition";
+@import "layouts/grids";

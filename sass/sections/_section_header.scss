@@ -1,4 +1,4 @@
-header {
+.header {
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),
@@ -13,6 +13,16 @@ header {
   -webkit-clip-path: ellipse(37% 32% at 49% 50%);
   clip-path: ellipse(60% 60% at 50% 33%);
 
+  &__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+  }
+
+  &__logo {
+    height: 7rem;
+  }
+
   &__text-box {
     position: absolute;
     top: 50%;
@@ -20,89 +30,4 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
   }
-
-  &__logo {
-    height: 7rem;
-  }
-
-  &__logo-box {
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-  }
 }
-
-.heading-primary {
-  color: $color-white;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-
-  &--main {
-    display: block;
-    font-size: 6.2rem;
-    font-weight: 400;
-    letter-spacing: 1.5rem;
-
-    animation: moveInLeft 1s ease-out;
-  }
-
-  &--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.8rem;
-
-    animation: moveInRight 1s ease-out;
-  }
-}
-
-/* Start animation header*/
-.btn--animated {
-  animation: moveUp_Button 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-
-  80% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-
-  80% {
-    transform: translateX(-1);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes moveUp_Button {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/*End animation header*/
