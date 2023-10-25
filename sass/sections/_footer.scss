@@ -1,10 +1,16 @@
 .footer {
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
   background-color: $color-grey-dark-1;
   padding: 10rem 0;
   font-size: 1.4rem;
   color: $color-grey-light-1;
 
   &__logo-box {
+    @include respond(tab-port) {
+      margin-bottom: 6rem;
+    }
     text-align: center;
     margin-bottom: 8rem;
   }
@@ -20,6 +26,11 @@
   }
 
   &__copyright {
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
     border-top: 1px solid $color-grey-light-1;
     padding-top: 2rem;
     width: 70%;
@@ -27,6 +38,10 @@
   }
 
   &__navigation {
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
     border-top: 1px solid $color-grey-light-1;
     padding-top: 2rem;
     display: inline-block;

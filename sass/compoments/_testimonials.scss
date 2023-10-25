@@ -1,32 +1,42 @@
 .testimonial {
   width: 80%;
-  padding: 6rem;
   margin: 0 auto;
+  margin-bottom: 2rem;
   box-shadow: 0 3rem 6rem rgba($color-black, 0.15);
+  padding: 6rem;
+  padding-left: 9rem;
   font-size: $default-font-size;
   border-radius: 100rem;
   background-color: rgba($color-white, 0.1);
-  margin-bottom: 2rem;
-  padding-left: 9rem;
+
+  @include respond(tab-port) {
+    width: 140%;
+    margin-left: -20%;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    margin-left: auto;
+  }
 
   &__shape {
     width: 15rem;
     height: 15rem;
-    background-color: orangered;
     float: left;
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem);
     margin-top: -1rem;
     shape-outside: circle(50% at 50% 50%);
+    position: relative;
   }
 
   &__img {
     width: 100%;
     transform: translateY(-2rem);
-    transition: all 0.3s;
   }
 
   &__caption {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 20%);
@@ -35,8 +45,6 @@
     font-size: 1.7rem;
     text-align: center;
     opacity: 0;
-    transition: all 0.5s;
-    position: absolute;
   }
 
   &:hover &__caption {
