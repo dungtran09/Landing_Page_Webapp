@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap");
-
 *,
 *::before,
 *::after {
@@ -11,6 +10,7 @@
 html {
   font-size: 62.5%;
 }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -21,17 +21,11 @@ body {
 }
 
 header {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(142, 158, 252, 0.8),
-      rgba(28, 62, 255, 0.8)
-    ),
-    url("../imgs/background1.jpg");
+  background-image: linear-gradient(to right bottom, rgba(142, 158, 252, 0.8), rgba(28, 62, 255, 0.8)), url("../imgs/background1.jpg");
   background-size: cover;
   background-position: top;
   height: 95vh;
   position: relative;
-
   -webkit-clip-path: ellipse(37% 32% at 49% 50%);
   clip-path: ellipse(60% 60% at 50% 33%);
 }
@@ -74,6 +68,57 @@ header {
   letter-spacing: 1.8rem;
 }
 
+/* Start animation header*/
+.heading-primary--main {
+  animation: moveInLeft 1s ease-out;
+}
+
+.heading-primary--sub {
+  animation: moveInRight 1s ease-out;
+}
+
+.btn--animated {
+  animation: moveUp_Button 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveUp_Button {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*End animation header*/
 .btn,
 .btn:link,
 .btn:visited {
@@ -127,61 +172,4 @@ header {
   opacity: 0;
 }
 
-/* Start animation header*/
-.heading-primary--main {
-  animation: moveInLeft 1s ease-out;
-}
-
-.heading-primary--sub {
-  animation: moveInRight 1s ease-out;
-}
-
-.btn--animated {
-  animation: moveUp_Button 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-
-  80% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-
-  80% {
-    transform: translateX(-1);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes moveUp_Button {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/*End animation header*/
+/*# sourceMappingURL=style.css.map */
